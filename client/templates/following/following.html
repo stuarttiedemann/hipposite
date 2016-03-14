@@ -1,4 +1,31 @@
 <template name="following">
+	<header class="text-center">
+  		<h1>The Hippo Guardian</h1>
+  		
+  		<p>A whimisical site where you can show your love hippos!</p>
+  		
+  	</header>
+  	
+  	
+  	<div class="row">
+  		<div class="col-md-12 text-center">
+  			<h2>Posts You Are Following</h2>
 
-	Following page.
+  		</div>
+  	</div>	
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2">
+  			<ul>
+	  			{{#each posts}}
+	  			<li class="post-body" name="newPosts">{{newPosts}}<br/>
+	  				<span>Created: {{formatDate createdAt}}</span>
+	  			</li>
+	  			{{else}}
+	  			<li>
+	  				<p>You Are Not Following Any Posts.</p>
+	  			</li>
+	  			{{/each}}
+	  		</ul>
+  		</div>
+  	</div>
 </template>

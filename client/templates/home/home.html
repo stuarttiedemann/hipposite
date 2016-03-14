@@ -2,6 +2,8 @@
 <template name="home">
     <header class="text-center">
   		<h1>The Hippo Guardian</h1>
+  		
+  		<p>A whimisical site where you can show your love hippos!</p>
   		{{> flashMessages}}
   	</header>
   	
@@ -34,7 +36,9 @@
 	  				{{#if isOwner}}
 	  					<button class="btn btn-danger delete">Delete</button>
 	  				{{else}}
-	  						<input type="checkbox" checked={{checked}} class="toggle-checked">Follow
+	  					{{#if currentUser}}
+	  						<input type="checkbox" checked={{checked}} class="toggle-checked liked">Follow
+	  					{{/if}}
 	  				{{/if}}
 	  				<div class="ranking">
 	  					<div class="number-likes">
