@@ -1,0 +1,92 @@
+/* CSS declarations go here */
+.row{
+	margin:0;
+	padding:0;
+}
+header{
+	height: 500px;
+	background-image: url("img/hippo.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+footer{
+	height: 70px;
+	color: #9d9d9d;
+	background: black;
+	margin-top: 100px;
+
+}
+footer p{
+	padding-top: 25px;
+}
+form{
+	width:60%;
+	margin:25px auto;
+}
+#login-button{
+	margin-top:15px;
+}
+#login-prompt{
+	float: right;
+	margin-right: 5%;
+}
+#login-buttons a{
+	color:#9d9d9d;
+	text-decoration: none;
+}
+.navbar{
+	border-radius: 0px;
+}
+.post-body{
+	position: relative;
+	height: 100px;
+	overflow: none;
+	background: #aaa;
+	list-style-type: none;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding:15px;
+}
+
+span{
+	/*float: right;*/
+	font-size: 10px;
+	margin-right: 5%;
+}
+.ranking{
+	float:right;
+	position: relative;
+	margin-top: -20px;
+}
+.ranking p{
+	margin-bottom:0;
+}
+.thumbs{
+	padding-bottom: 10px;
+	margin-bottom:10px;
+	position: relative;
+
+}
+.voted-up{
+	color: green;
+}
+.voted-down{
+	color: red;
+}
+.thumbs-up{
+	width: 50%;
+	float: left;
+	color: green;
+}
+.thumbs-up:hover{
+	cursor: pointer;
+}
+.thumbs-down{
+	width: 50%;
+	float:right;
+	color:red;
+}
+.thumbs-down:hover{
+	cursor: pointer;
+}

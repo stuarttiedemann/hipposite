@@ -1,0 +1,67 @@
+
+<template name="home">
+    <header class="text-center">
+  		<h1>The Hippo Guardian</h1>
+  		{{> flashMessages}}
+  	</header>
+  	
+  	<div class="row">	
+  		{{#if currentUser}}
+		 <form method="post" class="submit-posts">
+			        <div class="form-group">
+			            <label for="new-post"> LEAVE A POST</label>
+			            <textarea class="form-control" rows="2" name="newPost" id="new-post" required></textarea>
+			        </div>
+			        <input type="submit" class="btn btn-primary" value="Post it!">
+			    </form>
+		{{else}}
+			<h3 id="login-prompt">Log In to Join the Conversation</h3>
+		{{/if}}
+
+  	</div>
+  	<div class="row">
+  		<div class="col-md-12 text-center">
+  			<h2>Recent Posts</h2>
+
+  		</div>
+  	</div>	
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2">
+  			<ul>
+	  			{{#each posts}}
+	  			<li class="post-body" name="newPosts">{{newPosts}}<br/>
+	  				<span>Created: {{formatDate createdAt}}</span>
+	  				{{#if isOwner}}
+	  					<button class="btn btn-danger delete">Delete</button>
+	  				{{else}}
+	  						<input type="checkbox" checked={{checked}} class="toggle-checked">Follow
+	  				{{/if}}
+	  				<div class="ranking">
+	  					<div class="number-likes">
+	  						<p>Likes:{{count}}</p>
+	  					</div>
+	  					{{#if currentUser}}
+		  					<div class="thumbs">
+
+		  						<div class="thumbs-up">
+		  							<span class="glyphicon glyphicon-thumbs-up"></span>
+		  						</div>
+		  						<div class="thumbs-down">
+		  							<span class="glyphicon glyphicon-thumbs-down"></span>
+		  						</div>
+		  					</div>
+	  					{{/if}}
+	  				</div>
+
+	  			</li>
+	  			{{else}}
+	  			<li>
+	  				<p>There are no posts yet</p>
+	  			</li>
+	  			{{/each}}
+	  		</ul>
+  		</div>
+  	</div>
+
+</template>
+
