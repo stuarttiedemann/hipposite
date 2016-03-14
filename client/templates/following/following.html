@@ -21,9 +21,15 @@
 	  				<span>Created: {{formatDate createdAt}}</span>
 	  			</li>
 	  			{{else}}
-	  			<li>
-	  				<p>You Are Not Following Any Posts.</p>
-	  			</li>
+		  			{{#if currentUser}}
+			  			<li>
+			  				<p>You Are Not Following Any Posts.</p>
+			  			</li>
+			  		{{else}}
+			  			<li>
+			  				<p>You Must Be Logged In to See Posts You Are Following.</p>
+			  			</li>
+		  			{{/if}}
 	  			{{/each}}
 	  		</ul>
   		</div>

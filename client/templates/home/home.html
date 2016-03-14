@@ -3,7 +3,7 @@
     <header class="text-center">
   		<h1>The Hippo Guardian</h1>
   		
-  		<p>A whimisical site where you can show your love hippos!</p>
+  		<p>A whimisical site where you can show your love for hippos!</p>
   		{{> flashMessages}}
   	</header>
   	
@@ -37,7 +37,7 @@
 	  					<button class="btn btn-danger delete">Delete</button>
 	  				{{else}}
 	  					{{#if currentUser}}
-	  						<input type="checkbox" checked={{checked}} class="toggle-checked liked">Follow
+	  						<input type="checkbox" checked={{checked}} class="toggle-checked liked"><span class="follow">Follow</span>
 	  					{{/if}}
 	  				{{/if}}
 	  				<div class="ranking">
