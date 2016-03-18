@@ -27,7 +27,7 @@ form{
 	margin-top:15px;
 }
 #login-prompt{
-	float: right;
+	/*float: right;*/
 	margin-right: 5%;
 }
 #login-buttons a{

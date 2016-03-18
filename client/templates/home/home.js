@@ -29,6 +29,7 @@ Template.home.events({
 	'click .thumbs-up': function(){
 		var owner = this.owner;
 		var id = this._id;
+
 		Meteor.call('thumbsUp', owner, id);
 	},
 	'click .thumbs-down': function(){
