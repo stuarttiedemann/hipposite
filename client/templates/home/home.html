@@ -1,6 +1,6 @@
 
 <template name="home">
-    <header class="text-center">
+    <header class="text-right">
   		<h1>The Hippo Guardian</h1>
   		
   		<p>A whimisical site where you can show your love for hippos!</p>
@@ -42,16 +42,16 @@
 	  				{{/if}}
 	  				<div class="ranking">
 	  					<div class="number-likes">
-	  						<p>Likes:{{count}}</p>
+	  						<p id="likes">Likes:{{count}}</p>
 	  					</div>
 	  					{{#if currentUser}}
 		  					<div class="thumbs">
 
-		  						<div class="thumbs-up">
-		  							<span class="glyphicon glyphicon-thumbs-up"></span>
+		  						<div class="thumbs-up thumb-count">
+		  							<span id="thumbs-up" class="glyphicon glyphicon-thumbs-up"></span>
 		  						</div>
-		  						<div class="thumbs-down">
-		  							<span class="glyphicon glyphicon-thumbs-down"></span>
+		  						<div class="thumbs-down thumb-count">
+		  							<span id="thumbs-down" class="glyphicon glyphicon-thumbs-down"></span>
 		  						</div>
 		  					</div>
 	  					{{/if}}

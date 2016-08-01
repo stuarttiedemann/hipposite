@@ -1,13 +1,26 @@
 /* CSS declarations go here */
+html, body{
+	height: 100%;
+}
 .row{
 	margin:0;
 	padding:0;
+}
+.about{
+	min-height: 65vh;
 }
 header{
 	height: 500px;
 	background-image: url("img/hippo.jpg");
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: left bottom;
+}
+header h1{
+	margin-top:40px;
+}
+header h1, p{
+	margin-right: 20px
 }
 footer{
 	height: 70px;
@@ -39,7 +52,7 @@ form{
 }
 .post-body{
 	position: relative;
-	height: 100px;
+	/*height: 100px;*/
 	overflow: none;
 	background: #aaa;
 	list-style-type: none;
@@ -77,19 +90,28 @@ span{
 .voted-down{
 	color: red;
 }
-.thumbs-up{
-	width: 50%;
+#thumbs-up{
+	width: 40%;
 	float: left;
 	color: green;
+}
+#thumbs-down{
+	width: 40%;
+	float:right;
+	color:red;
 }
 .thumbs-up:hover{
 	cursor: pointer;
 }
-.thumbs-down{
-	width: 50%;
-	float:right;
-	color:red;
-}
 .thumbs-down:hover{
 	cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
+	#thumbs-up{
+		font-size: 16px;
+	}
+	#thumbs-down{
+		font-size: 16px;
+	}
 }

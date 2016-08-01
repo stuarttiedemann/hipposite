@@ -4,4 +4,4 @@ Meteor.publish('posts', function(){
 
 Meteor.publish('liked', function(){
 	return Liked.find();
-})
+});
